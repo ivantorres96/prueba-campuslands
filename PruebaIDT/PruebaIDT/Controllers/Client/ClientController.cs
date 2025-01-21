@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PruebaIDT.Domains.Clients;
 using PruebaIDT.Models.Models;
@@ -7,6 +8,7 @@ namespace PruebaIDT.Controllers.Client
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClientController(IClientDomain clientDomain) : ControllerBase
     {
         [HttpPost]

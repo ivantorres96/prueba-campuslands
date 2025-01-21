@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PruebaIDT.Domains.Pedido;
 using PruebaIDT.Models.DTOs.Pedidos;
@@ -7,6 +8,7 @@ namespace PruebaIDT.Controllers.Pedido
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class PedidoController(IPedidoDomain pedidoDomain) : ControllerBase
     {
         [HttpPost]
