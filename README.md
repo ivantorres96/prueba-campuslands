@@ -1,10 +1,10 @@
 # prueba-campuslands
 
-Configurar la cadena de conexion que esta en el appsetting para la base de datos SQL Server
+Configurar la cadena de conexion que esta en el appsettings.Development.json para la base de datos SQL Server
 
-Update-DataBase para la creacion de la base de datos usando las migraciones
+Update-DataBase en la consola de administrador de paquetes para la creacion de la base de datos usando las migraciones
 
-Scripts de SQL
+Scripts para correr para cargar unos productos
   Insert into Productos (Nombre, Precio, Stock, FechaCreacion)
   values ('media perla oro rosa', 25000, 25, GETDATE());
 
@@ -24,6 +24,6 @@ user: dario
 password: 321
 rol: cliente
 
-para probar el JWT esta habilitado en los endpoints de Producto como Obtener los productos y Actualizarlo.
+El cual devuelve un json con el token
 
   
